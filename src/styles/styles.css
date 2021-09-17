@@ -1,0 +1,10 @@
+.card{
+    background-color: #FF6666;
+    box-shadow: -17px -19px 0 0 rgb(0 0 0 / 10%);
+    width: 500px;
+    height: 621px;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #ffff;
+}
