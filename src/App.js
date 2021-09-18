@@ -1,4 +1,5 @@
 import "./styles/styles.css";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           </div>
           <div className='card-line'></div>
         </div>
+        <TodoList />
       </div>
     </main>
   );

@@ -41,3 +41,33 @@ body {
   padding-top: 10px;
   opacity: 50%;
 }
+
+
+
+.todoList{
+    padding-top: 40px;
+}
+
+.container{
+    display: flex;
+}
+
+.todoItem{
+    margin: 4px auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.todoItem-text{
+    flex: 1;
+    text-align: start;
+}
+
+.todoItem-operation{
+    flex: 0.2;
+    text-align: end;
+}
