@@ -1,10 +1,43 @@
-.card{
-    background-color: #FF6666;
-    box-shadow: -17px -19px 0 0 rgb(0 0 0 / 10%);
-    width: 500px;
-    height: 621px;
-    margin-top: 100px;
-    margin-right: auto;
-    margin-left: auto;
-    color: #ffff;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif !important;
+}
+
+.card {
+  background-color: #ff6666;
+  box-shadow: -17px -19px 0 0 rgb(0 0 0 / 10%);
+  width: 500px;
+  height: 621px;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #ffff;
+}
+
+.card-header {
+  width: 394px;
+  padding-top: 40px !important;
+  padding-left: 50px;
+  font-size: 50px;
+}
+
+.card-description {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  padding-top: 2px;
+  opacity: 95%;
+}
+
+.card-line {
+  color: #ffff;
+  width: 400px;
+  height: 1px;
+  margin: 0px auto;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  padding-top: 10px;
+  opacity: 50%;
 }
