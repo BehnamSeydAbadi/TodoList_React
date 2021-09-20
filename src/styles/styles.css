@@ -42,32 +42,64 @@ body {
   opacity: 50%;
 }
 
-
-
-.todoList{
-    padding-top: 40px;
+.todoList {
+  padding-top: 40px;
 }
 
-.container{
-    display: flex;
+.container {
+  display: flex;
 }
 
-.todoItem{
-    margin: 4px auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 20px;
-    background-color: rgba(255,255,255,0.1);
+.todoItem {
+  margin: 4px auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.todoItem-text{
-    flex: 1;
-    text-align: start;
+.todoItem-description {
+  flex: 1;
+  text-align: start;
+  white-space: nowrap;
 }
 
-.todoItem-operation{
-    flex: 0.2;
-    text-align: end;
+.todoItem-operation {
+  flex: 0.2;
+  text-align: end;
+}
+
+.checkBox:hover {
+  cursor: pointer;
+}
+
+@keyframes strike {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% + 1rem);
+  }
+}
+
+.checked {
+  position: relative;
+  opacity: 50%;
+}
+
+.checked::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #ffff;
+  animation-name: strike;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
