@@ -10,22 +10,25 @@ const TodoItem = ({ description, checked, onChecked, onDeleteClick }) => {
   let descriptionClassName;
 
   if (checked === true)
-    descriptionClassName = "todoItem-description checked";
+    descriptionClassName = "checked";
   else
-    descriptionClassName = "todoItem-description";
+    descriptionClassName = '';
+
 
   return (
-    <div className='todoItem container'>
-      <div className={descriptionClassName}>{description}</div>
-      <div className='todoItem-operation'>
-        {
-          checked === true ?
-            <CheckBox onClick={onChecked} className="checkBox" /> :
-            <CheckBoxOutlineBlank onClick={onChecked} className="checkBox" />
-        }
-        <DeleteIcon onClick={onDeleteClick} />
+    <li>
+      <div className='todoList-element todoItem todoItem-container'>
+        <span className={descriptionClassName}>{description}</span>
+        <div >
+          {
+            checked === true ?
+              <CheckBox onClick={onChecked} className="pointer" /> :
+              <CheckBoxOutlineBlank onClick={onChecked} className="pointer" />
+          }
+          <DeleteIcon onClick={onDeleteClick} />
+        </div>
       </div>
-    </div>
+    </li>
   );
 };
 
