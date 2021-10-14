@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./styles/styles.css";
 import TodoList from "./components/TodoList";
+import Switch from "./components/Switch";
 
 class App extends Component {
   state = {
@@ -80,17 +81,21 @@ class App extends Component {
           </div>
           <TodoList
             todoItems={todoItems}
+            areToDoItemsSorted={this.state.isSorted}
             onChecked={this.handleChecked}
             onDeleteClick={this.handleDelete}
           />
+          <Switch
+            text='Move done items at the end?'
+            onClick={this.handleSort}
+          />
 
-          <div className='todoList-element sort-container'>
-            <span className='description sort-description'>
-              Move done items at the end?
+          <div>
+            <div className='addItem-description'>Add to the todo list</div>
+            <span>
+              <input className='addItem-input' type='text' />
+              <button className="toDoList-button">ADD ITEM</button>
             </span>
-            <label className='switch pointer'>
-              <input type='checkbox' onClick={this.handleSort} /> <div></div>
-            </label>
           </div>
         </div>
       </main>

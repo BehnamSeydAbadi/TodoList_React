@@ -3,13 +3,12 @@
 :root {
   --primary-color: #ff6666;
   --secondry-color: #ffff;
-  /* --third-color: rgba(255, 255, 255, 0.1); */
   --third-color: #ff7676;
 }
 
 body {
   font-family: "Quicksand", sans-serif !important;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .card {
@@ -167,3 +166,41 @@ ul {
   list-style-type: none;
   padding-left: 0;
 }
+
+/*AddItem: Begin*/
+.addItem-description {
+  width: 394px;
+  /* padding-top: 10px !important; */
+  padding-left: 50px;
+  font-size: 30px;
+}
+
+input.inherit {
+  font-family: inherit;
+}
+
+.addItem-input {
+  font-size: 16px;
+  padding: 12px 24px 12px 24px;
+  margin-left: 50px;
+  margin-top: 5px;
+  margin-right: 5px;
+  width: 230px;
+}
+
+.toDoList-button {
+  background: none;
+  background-color: var(--primary-color);
+  border: 0.5px solid var(--secondry-color);
+  color: var(--secondry-color);
+  font-size: 13px;
+  font-weight: bold;
+  padding: 14px 24px 14px 24px;
+  outline: none;
+  cursor: pointer;
+}
+
+button:active{
+  outline: none;
+}
+/*AddItem: End*/

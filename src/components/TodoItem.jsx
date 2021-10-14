@@ -7,18 +7,15 @@ import CheckBox from "@material-ui/icons/CheckBox";
 
 const TodoItem = ({ description, checked, onChecked, onDeleteClick }) => {
 
-  let descriptionClassName;
+  let todoItemCheckedClassName = '';
 
   if (checked === true)
-    descriptionClassName = "checked";
-  else
-    descriptionClassName = '';
-
+    todoItemCheckedClassName = "checked";
 
   return (
     <li>
       <div className='todoList-element todoItem todoItem-container'>
-        <span className={descriptionClassName}>{description}</span>
+        <span className={todoItemCheckedClassName}>{description}</span>
         <div >
           {
             checked === true ?
