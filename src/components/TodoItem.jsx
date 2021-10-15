@@ -22,7 +22,7 @@ const TodoItem = ({ description, checked, onChecked, onDeleteClick }) => {
               <CheckBox onClick={onChecked} className="pointer" /> :
               <CheckBoxOutlineBlank onClick={onChecked} className="pointer" />
           }
-          <DeleteIcon onClick={onDeleteClick} />
+          <DeleteIcon onClick={onDeleteClick} className="pointer" />
         </div>
       </div>
     </li>

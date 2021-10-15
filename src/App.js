@@ -43,8 +43,22 @@ class App extends Component {
     this.setState({ todoItems });
   };
 
-  handleDelete = () => {
-    console.log("handleDelete");
+  handleDelete = (deletedTodoItem) => {
+    const todoItems = [...this.state.todoItems];
+    const sortedTodoItems = [...this.state.sortedTodoItems];
+
+    var filteredTodoItems = todoItems.filter(
+      (todoItem) => todoItem.id !== deletedTodoItem.id
+    );
+
+    var filteredSortedTodoItems = sortedTodoItems.filter(
+      (todoItem) => todoItem.id !== deletedTodoItem.id
+    );
+
+    this.setState({
+      todoItems: filteredTodoItems,
+      sortedTodoItems: filteredSortedTodoItems,
+    });
   };
 
   handleSort = () => {
