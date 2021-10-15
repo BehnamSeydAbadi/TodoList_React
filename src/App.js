@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./styles/styles.css";
 import TodoList from "./components/TodoList";
 import Switch from "./components/Switch";
+import AddTodoItem from "./components/AddTodoItem";
+import { v4 as uuidv4 } from "uuid";
 
 class App extends Component {
   state = {
@@ -62,6 +64,20 @@ class App extends Component {
     this.setState({ sortedTodoItems: todoItems, isSorted: true });
   };
 
+  handleAddTodoItem = (todoItemDescription) => {
+    if (!todoItemDescription) return;
+
+    const todoItems = [...this.state.todoItems];
+
+    todoItems.push({
+      id: uuidv4(),
+      description: todoItemDescription,
+      checked: false,
+    });
+
+    this.setState({ todoItems });
+  };
+
   render() {
     let todoItems;
 
@@ -89,14 +105,11 @@ class App extends Component {
             text='Move done items at the end?'
             onClick={this.handleSort}
           />
-
-          <div>
-            <div className='addItem-description'>Add to the todo list</div>
-            <span>
-              <input className='addItem-input' type='text' />
-              <button className="toDoList-button">ADD ITEM</button>
-            </span>
-          </div>
+          <AddTodoItem
+            label='Add to the todo list'
+            buttonText='ADD ITEM'
+            onClick={this.handleAddTodoItem}
+          />
         </div>
       </main>
     );

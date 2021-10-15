@@ -4,7 +4,29 @@
   --primary-color: #ff6666;
   --secondry-color: #ffff;
   --third-color: #ff7676;
+  --forth-color: #7a3838;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondry-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--forth-color);
+}
+
 
 body {
   font-family: "Quicksand", sans-serif !important;
@@ -51,6 +73,8 @@ body {
 
 .todoList {
   padding-top: 40px;
+  overflow-y: auto;
+  max-height: 223px;
 }
 
 .todoList-element {
